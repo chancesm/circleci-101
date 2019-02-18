@@ -1,6 +1,7 @@
 //apiTest.js
 const request = require('supertest');
 const app = require('../index');
+const wtf = require('wtfnode');
 
 //==================== user API test ====================
 
@@ -13,5 +14,10 @@ describe('GET /', function () {
             .get('/')
             .expect(200)
             .expect('hello world', done)
+
+    });
+    after(function () {
+        // wtf.dump();
+        app.server.close();
     });
 });
