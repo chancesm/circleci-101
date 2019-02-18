@@ -1,16 +1,17 @@
 //apiTest.js
 const request = require('supertest');
-const app = require('../app');
+const app = require('../index');
 
 //==================== user API test ====================
 
 /**
- * Testing get all user endpoint
+ * Testing root endpoint
  */
 describe('GET /', function () {
-    it('responds', function (done) {
+    it('responds with 200: "hello world"', function (done) {
         request(app)
             .get('/')
-            .expect(200, done);
+            .expect(200)
+            .expect('hello world', done)
     });
 });
