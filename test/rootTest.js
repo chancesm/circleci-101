@@ -13,7 +13,7 @@ describe('GET /', function () {
         request(app)
             .get('/')
             .expect(200)
-            .expect('hello world', done)
+            .expect('hello all', done)
 
     });
     after(function () {
