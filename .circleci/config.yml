@@ -36,5 +36,9 @@ jobs:
       # run tests!
       - run: yarn test
       
+      - run:
+          name: "What was my custom environment variable?"
+          command: echo ${DOCKER_HUB_TRIGGER}
+      
       # Deploy to DOcker Hub
       - run: $DOCKER_HUB_TRIGGER
