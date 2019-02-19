@@ -37,4 +37,4 @@ jobs:
       - run: yarn test
       
       # Deploy to DOcker Hub
-      - run $DOCKER_HUB_TRIGGER
+      - run: $DOCKER_HUB_TRIGGER
