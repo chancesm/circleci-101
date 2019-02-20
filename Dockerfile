@@ -5,6 +5,7 @@ WORKDIR /root
 ADD package.json /root
 ADD package-lock.json /root
 RUN npm install
+EXPOSE 3000
 
 # Run tests
 CMD  "npm start"
