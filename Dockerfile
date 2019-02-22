@@ -1,11 +1,11 @@
 FROM node:10
 
 # install dependencies in root directory
-WORKDIR /root
-ADD package.json /root
-ADD package-lock.json /root
+WORKDIR /app
+COPY . /app
+
 RUN npm install
 EXPOSE 3000
 
 # Run tests
-CMD  "./run.sh"
+CMD  ["npm","start"]
